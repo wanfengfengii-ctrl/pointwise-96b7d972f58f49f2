@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "kind": "cli",
+  "setup": [
+    ["python3", "-m", "py_compile", "duration_quantile.py", "scripts/verify.py", "scripts/demo.py", "scripts/bench.py"]
+  ],
+  "verify": [
+    ["python3", "scripts/verify.py"],
+    ["python3", "scripts/bench.py", "--intervals", "100000", "--queries", "100000"]
+  ],
+  "demo": [
+    ["python3", "scripts/demo.py"]
+  ]
+}
